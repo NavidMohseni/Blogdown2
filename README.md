@@ -1,2 +1,2 @@
 # Blogdown2
-Web
+My personal Website.
