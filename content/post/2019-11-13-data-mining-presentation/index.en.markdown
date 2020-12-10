@@ -1,14 +1,14 @@
 ---
 title: Data Mining Presentation
 author: Navid Mohseni
-date: '2019-11-13'
+date: '2020-02-13'
 slug: data-mining-presentation
 categories: ["Statistics"]
 tags: ["Statistics","Presentations"]
 subtitle: ''
 summary: ''
 authors: ["admin"]
-lastmod: '2019-11-14T15:53:27+03:30'
+lastmod: '2020-02-13T15:53:27+03:30'
 featured: no
 image:
   caption: ''
