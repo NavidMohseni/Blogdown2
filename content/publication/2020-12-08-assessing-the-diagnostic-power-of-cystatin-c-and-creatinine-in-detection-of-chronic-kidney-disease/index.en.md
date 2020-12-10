@@ -21,7 +21,6 @@ publication_types:
 publishDate: "2019-07-16T00:00:00Z"
 tags:
 - Articles
-title: Assessing the diagnostic power of Cystatin C and Creatinine in the detection of chronic
-kidney disease.
+title: Assessing the diagnostic power of Cystatin C and Creatinine in the detection of chronic kidney disease.
 url_pdf: https://journals.sbmu.ac.ir/index.php/aab/article/view/25589/17471
 ---
