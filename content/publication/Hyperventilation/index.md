@@ -10,7 +10,6 @@ date: "2020-09-22T00:00:00Z"
 doi: "http://dx.doi.org/10.31661/gmj.v9i0.1738"
 featured: false
 image:
-  caption: 'Image credit: [**Facty Health**](https://facty.com/ailments/respiratory/facts-about-hyperventilation/)'
   focal_point: ""
   preview_only: false
 projects: []

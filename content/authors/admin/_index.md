@@ -50,9 +50,9 @@ user_groups:
 - Principal Investigators
 ---
 
-Hi there, I'm Navid. I'm enthusiastic about data science, machine learning, statistics, and data visualization. Actually, anything relates to math, numbers, and beautiful charts absorb me. I've got my master's degree in Biostatistics at Shahid Beheshti University of Medical Sciences and Health Services. I also earned my bachelor's degree in Statistics from Shahid Beheshti University in 2016. 
-<br> I'm currently working as an independent data scientist in statistical projects alongside doing research and teaching R by conducting workshops. Before that, I was a data analyst at TezolMarket, where we attempted to solve challenging data problems each day. 
-<br> I am also interested in photography, books, football, running, climbing, and anything relates to art. The point is: I see no contradiction between math and art. 
+Hi there, I'm Navid. I'm enthusiastic about data science, machine learning, statistics, and data visualization. Actually, anything relates to math, numbers, and beautiful charts absorb me. I've got my master's degree in Biostatistics at <a href="https://en.sbmu.ac.ir/index.jsp?fkeyid=&siteid=256&pageid=2046">Shahid Beheshti  University of Medical Sciences and Health Services</a>. I also earned my bachelor's degree in Statistics from <a href="http://en.sbu.ac.ir/SitePages/Home.aspx">Shahid Beheshti University</a> in 2016. 
+<br> I'm currently working as an independent data scientist in statistical projects alongside doing research and teaching R by conducting workshops. Before that, I was a data analyst at <a href="https://www.tezolmarket.com/">TezolMarket</a>, where we attempted to solve challenging data problems each day. 
+<br> I am also interested in <a href="https://500px.com/p/Navidmohseni?view=photos">photography</a>, <a href="https://www.goodreads.com/user/show/54321599-navid-mohseni">books</a>, football, running, climbing, and anything relates to art. The point is: I see no contradiction between math and art. 
 <br> My website is built with blogdown (R + Markdown + Hugo) and deployed with Netlify.
 <br> If you have any questions or comments, please feel free to contact me.
 <br> Thanks for visiting!

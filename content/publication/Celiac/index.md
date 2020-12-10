@@ -14,7 +14,6 @@ date: "2020-08-01T00:00:00Z"
 doi: "10.29252/ibj.24.6.335"
 featured: false
 image:
-  caption: 'Image credit: [**Beyond Celiac **](https://www.beyondceliac.org/fast-facts-about-celiac-disease-infographic/)'
   focal_point: ""
   preview_only: false
 links:

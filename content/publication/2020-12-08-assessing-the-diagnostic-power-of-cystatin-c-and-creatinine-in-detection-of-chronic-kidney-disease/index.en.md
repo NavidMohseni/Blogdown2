@@ -11,7 +11,6 @@ date: "2019-07-15T00:00:00Z"
 doi: "doi.org/10.22037/aab.v10i3.25589"
 featured: false
 image:
-  caption: 'Image credit: [**The University of Chicago**](https://kidneystones.uchicago.edu/kidney-stones-kidney-function-kidney-disease/)'
   focal_point: ""
   preview_only: false
 projects: []
@@ -22,6 +21,7 @@ publication_types:
 publishDate: "2019-07-16T00:00:00Z"
 tags:
 - Articles
-title: The Optimal Cut-off Score of the Nijmegen Questionnaire for Diagnosing Hyperventilation Syndrome Using a Bayesian Model in the Absence of a Gold Standard
+title: Assessing the diagnostic power of Cystatin C and Creatinine in the detection of chronic
+kidney disease.
 url_pdf: https://journals.sbmu.ac.ir/index.php/aab/article/view/25589/17471
 ---
