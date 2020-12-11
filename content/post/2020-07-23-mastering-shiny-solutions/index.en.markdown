@@ -1,5 +1,5 @@
 ---
-title: Shiny Solutions - Chapter 3
+title: Mastering Shiny Book Solutions - Chapter 3
 author: Navid Mohseni
 date: '2020-06-23'
 slug: mastering-shiny-solutions
