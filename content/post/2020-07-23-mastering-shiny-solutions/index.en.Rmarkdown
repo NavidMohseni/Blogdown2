@@ -1,0 +1,340 @@
+---
+title: Mastering Shiny Solutions (Chapter 3)
+author: Navid Mohseni
+date: '2020-06-23'
+slug: mastering-shiny-solutions
+categories:
+  - R
+tags:
+  - Mastering Shiny Solutions
+  - Shiny
+  - R
+subtitle: 'Chapter 3'
+summary: ''
+authors: []
+lastmod: '2020-06-23T12:53:36+03:30'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+# Shiny Solutions
+
+
+Chapter by chapter, I try to solve the exercises from the latest book of Hadley Wickham: [**Mastering Shiny**](https://mastering-shiny.org/). It is a step by step progress, and your suggestions are very welcome.
+
+
+## Chapter 3
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, eval = FALSE)
+```
+
+Load Shiny Package
+```{r}
+library(shiny)
+ui <- fluidPage(
+  textInput("name", "what's your name"),
+  passwordInput("password", "What's your password?"),
+  textAreaInput("story", "Tell me about yourself", rows = 3)
+)  
+
+ui <- fluidPage(
+  numericInput("num","Choose Number", value = 0, min = 0, max = 100),
+  sliderInput("num1", "Choose", value = 0, min = 0, max = 100),
+  sliderInput("num2", "Choose", value = c(0,10), min = 0, max = 100)
+)
+
+ui <- fluidPage(
+  dateInput("dob", "When were you born?"),
+  dateRangeInput("holiday", "When do you want to go on vacation next?", 
+                 language = "fa",
+                 weekstart = 1)
+)
+
+server <- function(input, output){
+  
+}
+shinyApp(ui, server)
+
+
+colorsss <- c("Red", "Blue", "Yellow", "White", "Black")
+statesss <- c("Tehran", "Karaj")
+ui <- fluidPage(
+  selectInput("state", "Your Home", statesss),
+  radioButtons("color", "Your favorite Color", colorsss)
+)
+
+ui <- fluidPage(
+  selectInput("state1", "CHOOSE", state.name, multiple = TRUE)
+)
+
+ui <- fluidPage(
+  checkboxGroupInput("color2", "CHOOSE", colorsss)
+)
+
+ui <- fluidPage(
+  checkboxInput("cleanup", "Clean up?", value = TRUE),
+  checkboxInput("shutdown", "Shutdown?")
+)
+
+ui <- fluidPage(
+  fileInput("upload", NULL)
+)
+
+ui <- fluidPage(
+  fluidRow(
+    actionButton("click", "Click", class = "btn-primary"),
+    actionButton("drink", "Drink Me!", class = "btn-large btn-success")
+  ),
+  fluidRow(
+    actionButton("eat", "EAT IT", class = "btn-block")
+  )
+)
+
+#3.2.8.1
+?textInput
+
+ui <- fluidPage(
+  textInput("name", "", placeholder = "Your name")
+)
+server <- function(input, output){
+  
+}
+shinyApp(ui, server)
+
+#3.2.8.2
+?sliderInput
+
+ui <- fluidPage(
+  sliderInput("date", "When Should we deliver?", 
+              value = as.Date("2018-08-09", "%Y-%m-%d"),
+              min = as.Date("2018-08-09", "%Y-%m-%d"), 
+              max = as.Date("2018-08-22", "%Y-%m-%d"),
+              dragRange = TRUE)
+)
+
+server <- function(input, output){
+  
+}
+shinyApp(ui, server)
+
+#3.2.8.3
+?selectInput
+
+ui <- fluidPage(
+  selectInput("state", "Choose a state:",
+              list(`East Coast` = list("NY", "NJ", "CT"),
+                   `West Coast` = list("WA", "OR", "CA"),
+                   `Midwest` = list("MN", "WI", "IA"))
+  )
+)
+server <- function(input, output){
+  
+}
+shinyApp(ui, server)
+
+#3.2.8.4
+ui <- fluidPage(
+  sliderInput("num", "Choose", value = 10,
+              min = 0,
+              max = 100,
+              step = 5,
+              animate = TRUE)
+)
+server <- function(input, output){
+  
+}
+shinyApp(ui, server)
+
+#3.2.8.5
+ui <- fluidPage(
+  numericInput("number", "Select a value", value = 150, min = 0, 
+               max = 1000, step = 50)
+)
+server <- function(input, output){
+  
+}
+shinyApp(ui, server)
+
+
+#Output
+ui <- fluidPage(
+  textOutput("text"),
+  verbatimTextOutput("code")
+)
+
+server <- function(input, output, session){
+  output$text <- renderText({
+    "Hello Friend!"
+  })
+  output$code <- renderPrint({
+    summary(1:10)
+  })
+}
+shinyApp(ui, server)
+
+
+ui <- fluidPage(
+  tableOutput("static"),
+  dataTableOutput("dynamic")
+)
+
+server <- function(input, output, session){
+  output$static <- renderTable(head(mtcars))
+  output$dynamic <- renderDataTable(head(mtcars), options = list(pageLength = 5))
+}
+shinyApp(ui , server)
+
+ui <- fluidPage(
+  plotOutput("plot", width = "400px")
+)
+server <- function(input, output, session){
+  output$plot <- renderPlot({plot(1:5) 
+    res = 96})
+}
+shinyApp(ui, server)
+
+#3.3.5.1
+ui <- fluidPage(
+  plotOutput("plot", width = "700px", height = "300px")
+)
+server <- function(input, output, session){
+  output$plot <- renderPlot(plot(1:5), res = 96)
+}
+shinyApp(ui, server)
+
+
+#3.3.5.2
+ui <- splitLayout(
+  plotOutput("plot1", width = "350px"),
+  plotOutput("plot2", width = "350px")
+)
+server <- function(input, output, session){
+  output$plot1 <- renderPlot(plot(1:5))
+  output$plot2 <- renderPlot(plot(1:5))
+}
+shinyApp(ui, server)
+
+  #3.3.5.3
+  ui <- fluidPage(
+    dataTableOutput("table")
+  )
+  server <- function(input, output, session) {
+    output$table <- renderDataTable(mtcars, options = list(ordering = FALSE,
+                                                           searching = FALSE,
+                                                           filtering = FALSE))
+  }
+  shinyApp(ui, server)
+  
+
+
+  
+  
+  
+  
+  
+ui <- fluidPage(
+    titlePanel("Hello Shiny!"),
+    sidebarLayout(
+      sidebarPanel(
+        sliderInput("obs", "Observations:", min = 0, max = 1000, value = 500)
+      ),
+      mainPanel(
+        plotOutput("distPlot")
+      )
+    )
+  )
+server <- function(input, output){
+  
+}
+shinyApp(ui, server)
+
+
+
+ui <- fluidPage(
+  titlePanel("Central Limit Theorem"), 
+  sidebarLayout(
+    sidebarPanel(
+      numericInput("num", "Number of Samples:", 2, min = 1, max = 100)
+    ),
+    mainPanel(
+      plotOutput("hist")
+    )
+  )
+)
+server <- function(input, output, session){
+  output$hist <- renderPlot({
+    means <- replicate(1e4, mean(runif(input$num)))
+    hist(means, breaks = 20)
+  }, res = 96)
+}
+shinyApp(ui, server)
+
+
+shinyApp(
+  ui = fluidPage(
+    shinythemes::themeSelector(),  # <--- Add this somewhere in the UI
+    sidebarPanel(
+      textInput("txt", "Text input:", "text here"),
+      sliderInput("slider", "Slider input:", 1, 100, 30),
+      actionButton("action", "Button"),
+      actionButton("action2", "Button2", class = "btn-primary")
+    ),
+    mainPanel(
+      tabsetPanel(
+        tabPanel("Tab 1"),
+        tabPanel("Tab 2")
+      )
+    )
+  ),
+  server = function(input, output) {}
+)
+
+#3.4.6.1
+ui <- fluidPage(
+  titlePanel("Central Limit Theorem"), 
+  sidebarLayout(
+    mainPanel(
+      plotOutput("hist")
+    ),
+    sidebarPanel(
+      numericInput("num", "Number of Samples:", 2, min = 1, max = 100)
+    )
+  )
+)
+server <- function(input, output, session){
+  output$hist <- renderPlot({
+    means <- replicate(1e4, mean(runif(input$num)))
+    hist(means, breaks = 20)
+  }, res = 96)
+}
+shinyApp(ui, server)
+
+#3.4.6.2
+library(shinythemes)
+ui <- fluidPage(
+  theme = shinytheme("flatly"),
+  titlePanel("Central Limit Theorem"), 
+  sidebarLayout(
+    mainPanel(
+      plotOutput("hist")
+    ),
+    sidebarPanel(
+      numericInput("num", "Number of Samples:", 2, min = 1, max = 100)
+    )
+  )
+)
+server <- function(input, output, session){
+  output$hist <- renderPlot({
+    means <- replicate(1e4, mean(runif(input$num)))
+    hist(means, breaks = 20)
+  }, res = 96)
+}
+shinyApp(ui, server)
+
+```
+
