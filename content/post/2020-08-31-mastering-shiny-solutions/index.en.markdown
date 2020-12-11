@@ -41,6 +41,7 @@ library(shiny)
 Exercise 1
 
 ```r
+
 #2.8.1
 ui <- fluidPage(textInput("name", label = "What's your name?"),
                 textOutput("greeting")
@@ -150,3 +151,6 @@ server <- function(input, output, session) {
 shinyApp(ui, server)
 
 ```
+
+ 
+ 

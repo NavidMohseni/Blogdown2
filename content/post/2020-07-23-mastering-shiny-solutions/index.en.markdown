@@ -1,5 +1,5 @@
 ---
-title: Mastering Shiny Solutions (Chapter 3)
+title: Shiny Solutions - Chapter 3
 author: Navid Mohseni
 date: '2020-06-23'
 slug: mastering-shiny-solutions
@@ -314,6 +314,7 @@ server <- function(input, output, session){
 shinyApp(ui, server)
 
 #3.4.6.2
+
 library(shinythemes)
 ui <- fluidPage(
   theme = shinytheme("flatly"),
