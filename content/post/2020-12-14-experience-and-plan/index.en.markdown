@@ -1,0 +1,37 @@
+---
+title: Past experience and future plans
+author: Navid Mohseni
+date: '2020-12-14'
+slug: experience-and-plan
+categories:
+  - Statistics
+  - Biography
+tags:
+  - Teaching
+  - Statistics
+  - Plan
+  - Experience
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2020-12-14T10:01:00+03:30'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+
+In high school, I really liked mathematics and statistics. However, I was very disappointed after I chose the path of statistics at the university. Although it was one of the best and prestigious universities in my country, especially in statistics, it was mostly about proving hard mathematical theorems, a few statistical programming courses, and antiquated teaching methods. We had to learn R by ourselves, but R console's screen appearance was frustrating enough for most of us to totally abandon it.  
+After graduation, by working as a data analyst, taking online courses (e.g., Datacamp), finding RStudio IDE, and applying tidyverse package, I had this chance to change my perspective about R programming. Eventually, the sparks of interest in statistics flared up again, which made me pursue my education in the master of biostatistics. As a teacher assistant, I tried my best to teach statistics via R to my students, precisely the opposite way I had learned statistics. By gaining more confidence and my professors' endorsements, I taught R to my colleagues and Ph.D. students. Eventually, the university endorsed me to conduct more workshops for other fields of study. The workshops' best moments were when students told me that they were not afraid of R anymore. Besides, it was beneficial for me, as the old adage: the best way to learn a topic is to teach it. Along the way, especially during the corona pandemic, I realized that data analysis is not a solo work. I've recently made my new website with the Blogdown package and realized the importance of Github. I am now eager to learn more about shiny to present my results interactively.  
+Nevertheless, Trump's economic and financial sanctions against my country have a devastating impact on people (not politicians!). Iran has experienced inflation of 40.4% over the past two years (A steep drop in the value of the Iranian rial). The sanctions affect health, research, and education, which were not supposed to be their target. Therefore, online learning is too costly, especially for students. Moreover, educationally, many educational websites and software development services banned or reduced the access of Iranians to their contents. For example, Github and Gitlab provide no private repositories. Many websites are not accessible anymore without a VPN, traveling to scientific conferences is prevented, and complicated banking transactions are just a few examples. Despite these difficulties, I do not want to be a victim of the situation; as far as I can, I want to overcome these obstacles by learning more and provide more free educational content for all students. I truly believe that education should be free for all and should not be taken away from anyone because of their race, sexuality, and birthplace. Accordingly, some of my future ideas are:
+- Create my YouTube channel to teach R in Persian to reduce the language burden
+- Learn to optimize my website and make more contents
+- Conduct more workshops, especially in deprived regions
+- Establish R community in my country
+- Translate free R books and publish them via bookdown  
+
+
+In the end, I hope that by participating in RStudio conference, I learn more about new educational methods. As I tried that students do not experience the learning of statistics in the way I first experienced, I hope that with others' help, they feel that these difficult situations cannot take their dreams away.
