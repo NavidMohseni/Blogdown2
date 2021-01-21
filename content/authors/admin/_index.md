@@ -57,4 +57,4 @@ Hi there, I'm Navid. I'm enthusiastic about data science, machine learning, stat
 <br> If you have any questions or comments, please feel free to contact me.
 <br> Thanks for visiting!
 
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/Navid Mohseni-Resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/Navid Mohseni -Resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
