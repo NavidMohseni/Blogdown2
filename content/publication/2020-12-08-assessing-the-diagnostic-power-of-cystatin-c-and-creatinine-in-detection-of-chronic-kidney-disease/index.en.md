@@ -8,7 +8,7 @@ authors:
 - Faranak Kazeruni
 - Farid Zayeri
 date: "2019-07-15T00:00:00Z"
-doi: "doi.org/10.22037/aab.v10i3.25589"
+doi: "10.22037/aab. v10i3.25589"
 featured: false
 image:
   focal_point: ""
