@@ -88,5 +88,13 @@ item:
   organization: ELSEVIER
   organization_url: "https://www.elsevier.com/"
   title: "Introduction to Scholarly Publishing Workshop"
-  url: "https://www.elsevier.com/"  
+  url: "https://www.elsevier.com/"
+- certificate_url: media/Tableau-Fundamentals-Track.pdf 
+  date_end: ""
+  date_start: "2021-05-11"
+  description: ""
+  organization: DataCamp
+  organization_url: https://www.datacamp.com
+  title: "Tableau"
+  url: "https://www.datacamp.com"  
 ---
