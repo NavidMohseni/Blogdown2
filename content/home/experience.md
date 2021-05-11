@@ -16,7 +16,7 @@ experience:
   title: Intern
 - company: Maya-Stat
   company_url: https://mayastat.ir/
-  date_end: ''
+  date_end: '2018-03-13'
   date_start: '2017-03-21'
   description: |-
   - Responsibilities include:
