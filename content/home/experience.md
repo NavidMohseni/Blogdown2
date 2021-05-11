@@ -14,16 +14,14 @@ experience:
   description: Monthly statistical reports and analyzing business development.
   location: Tehran
   title: Intern
-- company: Maya-Stat
-  company_url: https://mayastat.ir/
-  date_end: ''
-  date_start: '2017-03-21'
-  description: |2- 
-    Responsibilities include:
-    * We are using advanced analytics and statistics
-to analyze and prioritize the activities that add value to businesses.
-    * Trying to overcome a range of challenges, such as optimizing marketing spend, forecasting demand, boosting customer retention, maximizing customer lifetime value, increasing operational efficiency, and saving costs.
-    * Generating statistical reports to support business strategy.
-  location: Tehran
-  title: Co-Founder    
+- title: Data Analyst
+    company: TezolMarket
+    company_url: 'https://www.tezolmarket.com/'
+    location: Iran
+    date_start: '2019-05-01'
+    date_end: '2019-07-01'
+    description: |2-
+      * Statistical analysis on online supermarket data.
+      * Implementation of statistical methods like ANOVA and also predict needs based on their results.
+         
 ---
