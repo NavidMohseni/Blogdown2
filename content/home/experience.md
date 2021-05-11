@@ -15,7 +15,7 @@ experience:
     Responsibilities include:
     * We are using advanced analytics and statistics to analyze and prioritize the activities that add value to businesses.
     * Trying to overcome a range of challenges, such as optimizing marketing spend, forecasting demand, boosting customer retention, maximizing customer lifetime value, increasing operational efficiency, and saving costs.
-    * Data cleansing, manipulating data, converting analytic thinking into action, and communicating to drive change.
+    * Data cleansing, manipulating data, converting analytic thinking into action, and communicating to data-driven change.
   location: Tehran
   title: Co-Founder
 - company: ""
