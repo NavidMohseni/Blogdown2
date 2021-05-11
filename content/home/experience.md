@@ -14,14 +14,5 @@ experience:
   description: Monthly statistical reports and analyzing business development.
   location: Tehran
   title: Intern
-- title: Data Analyst
-    company: TezolMarket
-    company_url: 'https://www.tezolmarket.com/'
-    location: Iran
-    date_start: '2019-05-01'
-    date_end: '2019-07-01'
-    description: |2-
-      * Statistical analysis on online supermarket data.
-      * Implementation of statistical methods like ANOVA and also predict needs based on their results.
-         
+
 ---
