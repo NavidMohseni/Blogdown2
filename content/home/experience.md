@@ -7,9 +7,21 @@ widget: experience
 subtitle: null
 date_format: Jan 2006
 experience:
+- company: "Maya-Stat"
+  company_url: "https://www.mayastat.ir/"
+  date_end: ""
+  date_start: "2021-04-01"
+  description: |-
+    Responsibilities include:
+    * Analyze data sets from clients to create clear and compelling reports, visualizations, and interactive           apps.
+    * Communicate and share the results of the analyses for better decision making.
+    * Explaining technical material to non-technical audience.
+    * Teaching R through conducting workshops.
+  location: Tehran
+  title: Co-Founder
 - company: ""
   company_url: ""
-  date_end: ""
+  date_end: "2021-03-01"
   date_start: "2019-04-01"
   description: |-
     Responsibilities include:
