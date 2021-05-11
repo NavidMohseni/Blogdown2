@@ -16,10 +16,9 @@ experience:
   title: Intern
 - company: Maya-Stat
   company_url: https://mayastat.ir/
-  date_end: '2018-03-13'
+  date_end: ''
   date_start: '2017-03-21'
-  description: |-
-  - Responsibilities include:
+  description: 
   * We are using advanced analytics and statistics
 to analyze and prioritize the activities that add value to businesses.
   * Trying to overcome a range of challenges, such as optimizing marketing spend, forecasting demand, boosting customer retention, maximizing customer lifetime value, increasing operational efficiency, and saving costs.
