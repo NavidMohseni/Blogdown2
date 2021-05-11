@@ -20,10 +20,10 @@ experience:
   date_start: '2017-03-21'
   description: |2- 
     Responsibilities include:
-    * Wee are using advanced analytics and statistics
+    * We are using advanced analytics and statistics
 to analyze and prioritize the activities that add value to businesses.
-  * Trying to overcome a range of challenges, such as optimizing marketing spend, forecasting demand, boosting customer retention, maximizing customer lifetime value, increasing operational efficiency, and saving costs.
-  * Generating statistical reports to support business strategy.
+    * Trying to overcome a range of challenges, such as optimizing marketing spend, forecasting demand, boosting customer retention, maximizing customer lifetime value, increasing operational efficiency, and saving costs.
+    * Generating statistical reports to support business strategy.
   location: Tehran
   title: Co-Founder    
 ---
