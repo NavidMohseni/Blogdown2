@@ -1,0 +1,155 @@
+---
+title: Regression
+author: Navid Mohseni
+date: '2021-06-28'
+slug: regression
+categories:
+  - R
+  - Statistics
+  - Machine Learning
+tags:
+  - Academic
+  - R
+  - regression
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2021-06-28T15:05:17+04:30'
+output:
+  html_document:
+    toc: true
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+knitr::opts_chunk$set(eval = FALSE)
+```
+
+-   Regression
+
+-   What is Regression
+
+-   Linear Regression
+
+    -   Regression Terms
+    -   Run Linear Regression Model
+    -   Regression Visualization
+
+-   Regression Predictions
+
+    -   Model Summary
+    -   Regression to the mean
+    -   Transformations
+
+-   Quantifying model fit
+
+-   Logistic Regression
+
+# *Regression*
+
+![](%22https://unsplash.com/photos/XJmmH6GajlY?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink%22)
+
+## **What is regression?**
+
+Regression is a statistical model to explore the relationship between a response (dependent) variable and some explanatory (independent) variables. The main goal of regression modeling is to make predictions. Given the values of explanatory variables, you can predict the values of the response variable. (Note: Response variable is the variable that you want to predict. Explanatory variables are the variables that explain how the response variable will change).\
+In other words, *Response value = fitted value + residual*.
+
+By fitting regression model, we try our best to explain the response variable by the means of explanatory variables. Although, we can not explain the response variable in a perfect way. That's why there are residuals in the formula. Residuals exist due to problems in the model and fundamental randomness.
+
+## **Linear Regression**
+
+In the linear regression, the response variable is numeric. However, the response variable could be any type. For example, it could be logical. In this case, the model is logistic regression. Regressions can also be divided to *Simple* or *Multiple*. By *Simple Regression*, we are trying to say that there is just one explanatory variable, however, in *Multiple Regression*, there are more than just one explanatory variables.
+
+### **Regression Terms**
+
+Straight lines are defined by two things. *Intercept* and *Slope*. The *Intercept* is the **y** value at the point when **x** is zero. Slope is the amount the **y** value increases if you increase **x** by one. Here is the equation: $y = intercept + slope*x$.\
+It is straightforward to find the slope of a line. Remember mathematics from high school: specify the points, then using this formula: $y_2 - y_1 / x_2 - x_1$.
+
+### **Run Linear Regression Model**
+
+By using `lm()` function, we can run linear regression model in R. `lm(response_variable ~ explanatory variable + explanatory variable + ... , data = data)`
+
+```{r}
+data("mpg")
+lm(displ ~ cty, data = mpg)
+```
+
+For categorical data, the estimation of the *intercept* is based on a comparison with other explanatory variables. In other words, one of the factors is chosen by `lm()` and other factors are estimated based on the chosen factor. To eliminate this dependence, we can run `lm(response variable ~ explanatory variable + 0, data = data).` (By adding "*+ 0***"** to the formula).
+
+### **Regression Visualization**
+
+For visualization, we can try `geom_smooth(method = "lm", se = FALSE)` for linear regression model. `se()` is standard error.
+
+## **Regression Predictions**
+
+If I set the explanatory variables to these values, what value would the response variable have? First, we make a `tibble()`. Then, call `predict()`.
+
+```{r}
+new_data <- tibble(x = 10:50)
+predict(model, new_data)
+```
+
+or in a better way:
+
+```{r}
+prediction_data <- new_data %>% 
+  mutate(predictions = predict(model, new_data))
+```
+
+To show predictions:
+
+```{r}
+ggplot(data, aes(x, y)) + 
+  geom_point() + 
+  geom_smooth(method = "lm", se = FALSE) + 
+  geom_point(
+    data = prediction_data, 
+    color = "yellow"
+  )
+```
+
+Note: Be cautious about extrapolating which means making predictions outside the range of observed data.
+
+### **Model Summary**
+
+The basic elements for working with model objects in R are: `coefficients(model)` `fitted(model)` (predictions on the original dataset) `residuals(model)` (actual response values minus predicted response values) `summary()`
+
+Better way to work with model summary is `broom` package. `tidy(model)` `augment(model)` `glance(model)`
+
+### **Regression to the mean**
+
+Extreme cases are often due to randomness of residuals. Regression to the mean means extreme cases don't persist over time.
+
+### **Transformation**
+
+It is common in real-world datasets, we encounter with relationships which are not linear. Best way to see this non-linear relationship is visualization. However, by transforming the variables of the interest, we can make the relationship linear again.\
+Transformations could be applied on explanatory variables, response variable, or both.
+
+```{r}
+model <- lm(y ~ I(x ^ 3), data = data)
+ggplot(data, aes(x^3, y)) + 
+  geom_point() + 
+  geom_smooth(method = "lm", se = FALSE) + 
+  geom_point(data = prediction_data, color = "blue")
+```
+
+*IMPORTANT NOTE*:
+
+When you are transforming the y (response) variable, you should back-transform the variable in next steps.\
+In other words, When the response variable is transformed you need to back transform the predictions. But independent variable is not necessary to be back-transformed. Use `I()` for exponential. Specifically, `I()` for both variables if you want to have exponential transform for both dependent and Independant variables.
+
+```{r}
+model <- lm(sqrt(y) ~ sqrt(x), data = data)
+prediction_data <- new_data %>% 
+  mutate(sqrt_y_pred = predict(model, new_data),
+         y = sqrt(y)^2)
+```
