@@ -19,7 +19,7 @@ experience:
     * Predictive analysis and associated processes, including pre-processing and cleaning data, exploratory data       analysis, model training, testing, and evaluation.
     * Developed advanced analytics solutions for the business to improve decision making process.
   location: Tehran
-  title: Data Analyst
+  title: Data Scientist
 - company: RahkarAndishan
   company_url: "http://www.rahkarandishan.com/"
   date_end: "2017-04-30"
