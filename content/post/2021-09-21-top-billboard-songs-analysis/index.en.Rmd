@@ -1,0 +1,306 @@
+---
+title: Top Billboard Songs Analysis
+author: Navid Mohseni
+date: '2021-09-21'
+slug: top-billboard-songs-analysis
+categories:
+  - Machine Learning
+  - R
+tags:
+  - tidyverse
+  - tidymodels
+  - billboard
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2021-09-23T09:41:16+03:30'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+# Top Billboard Songs Analysis
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Loading necessary libraries
+```{r setup, include=FALSE}
+library(tidyverse)
+library(tidymodels)
+library(corrr)
+library(scales)
+library(lubridate)
+library(textrecipes)
+library(ggforce)
+```
+
+# First Analysis
+
+Loading Tidytuesday
+Consisting of two parts. Billboard data and audio features data.
+```{r}
+tuesdata <- tidytuesdayR::tt_load(2021, week = 38)
+billboard <- tuesdata$billboard
+billboard
+audio_features <- tuesdata$audio_features
+```
+
+Max weeks on the chart of billboard.
+```{r}
+max_weeks <- 
+  billboard %>% 
+  group_by(song_id) %>% 
+  summarise(weeks_on_chart = max(weeks_on_chart))
+```
+
+`inner join()` is a great way in tidying data.
+```{r}
+billboard_joined <- 
+  audio_features %>% 
+  filter(!is.na(danceability)) %>% 
+  inner_join(max_weeks)
+```
+
+`factor` the `fill` argument in the ggplot.
+```{r}
+billboard_joined %>% 
+  filter(time_signature > 1) %>% 
+  ggplot(aes(tempo, fill = factor(time_signature))) + 
+  geom_histogram(alpha = 0.5, position = "identity") + 
+  labs(fill = "Time Signature")
+```
+
+## Correlation Analysis
+```{r}
+billboard_joined %>% 
+  select(danceability:weeks_on_chart) %>% 
+  na.omit() %>% 
+  correlate() %>% 
+  rearrange() %>% 
+  network_plot()
+```
+
+## Dimensionality Reduction
+With the advantage of tidymodels.
+In the `initial split()` remember the `strata`
+```{r}
+set.seed(123)
+
+billboard_split <- 
+  billboard_joined %>% 
+  select(danceability:weeks_on_chart) %>% 
+  na.omit() %>% 
+  mutate(weeks_on_chart = log(weeks_on_chart)) %>% 
+  initial_split(strata = weeks_on_chart)
+
+billboard_split
+
+billboard_train <- training(billboard_split)
+billboard_test <- testing(billboard_split)
+```
+
+Preprocessing part.
+```{r}
+billboard_rec <- 
+  recipe(weeks_on_chart ~ ., data = billboard_train) %>% 
+  step_zv(all_numeric_predictors()) %>% 
+  step_normalize(all_numeric_predictors())
+
+billboard_rec
+
+rec_trained <- prep(billboard_rec)
+```
+
+`Prep` is just like `fit`
+`Bake` is just like `predict`
+```{r}
+plot_test_results <- function(receipe, dat = billboard_test) {
+  receipe %>% 
+    prep() %>% 
+    bake(new_data = dat) %>% 
+    ggplot() + 
+    geom_autopoint(aes(color = weeks_on_chart), alpha = 0.4, size = 0.5) + 
+    geom_autodensity(alpha = 0.3) + 
+    facet_matrix(vars(-weeks_on_chart), layer.diag = 2) + 
+    scale_color_distiller(palette = "BuPu", direction = 1) +
+    labs(color = "weeks (log)")
+}
+```
+
+### PCA
+
+- Linear
+- Unsupervised learning
+- Based on variance
+
+```{r}
+rec_trained %>% 
+  step_pca(all_numeric_predictors(), num_comp = 4) %>% 
+  plot_test_results() + 
+  ggtitle("PCA")
+```
+
+
+```{r}
+rec_trained %>% 
+  step_pca(all_numeric_predictors(), num_comp = 4) %>% 
+  prep() %>% 
+  tidy(number = 3) %>%
+  filter(component %in% paste0("PC", 1:4)) %>% 
+  group_by(component) %>% 
+  slice_max(abs(value), n = 5) %>% 
+  ungroup() %>% 
+  ggplot(aes(abs(value), terms, fill = value > 0)) + 
+  geom_col(alpha = 0.8) + 
+  facet_wrap(vars(component), scales = "free_y") + 
+  labs(x = "Contribution to PCA", y = NULL, fill = "Positive?")
+```
+
+
+### PLS
+
+- like PCA
+- But Supervised
+
+```{r}
+rec_trained %>% 
+  step_pls(all_numeric_predictors(), outcome = "weeks_on_chart", num_comp = 4) %>%
+  plot_test_results() +  
+  ggtitle("PLS")
+```
+
+
+```{r}
+rec_trained %>% 
+  step_pls(all_numeric_predictors(), outcome = "weeks_on_chart", num_comp = 4) %>% 
+  prep() %>% 
+  tidy(number = 3) %>%
+  filter(component %in% paste0("PLS", 1:4)) %>% 
+  group_by(component) %>% 
+  slice_max(abs(value), n = 5) %>% 
+  ungroup() %>% 
+  ggplot(aes(abs(value), terms, fill = value > 0)) + 
+  geom_col(alpha = 0.8) + 
+  facet_wrap(vars(component), scales = "free_y") + 
+  labs(x = "Contribution to PLS", y = NULL, fill = "Positive?")
+```
+
+# Second Analysis
+
+```{r}
+longest_number_1 <- billboard %>% 
+  filter(week_position == 1) %>% 
+  count(song_id, song, performer, sort = TRUE)
+
+billboard %>% 
+  semi_join(head(longest_number_1, 9), by = "song_id") %>%  
+  ggplot(aes(week, week_position, group = instance)) + 
+  geom_line() + 
+  facet_wrap(~song, scales = "free_x") + 
+  scale_y_reverse()
+```
+
+Remember `n_songs_at_number_1 = n_distinct(song[week_position == 1])`
+```{r}
+by_performer <- billboard %>% 
+  group_by(performer) %>% 
+  summarise(total_weeks_on_top_100 = n(),
+            total_weeks_at_number_1 = sum(week_position == 1),
+            n_songs_on_top_100 = n_distinct(song),
+            n_songs_at_number_1 = n_distinct(song[week_position == 1])) %>% 
+  arrange(desc(n_songs_at_number_1))
+
+by_performer %>% 
+  arrange(desc(n_songs_on_top_100)) %>% 
+  head(15) %>% 
+  mutate(performer = fct_reorder(performer, n_songs_on_top_100)) %>% 
+  ggplot(aes(n_songs_on_top_100, performer)) + 
+  geom_col() + 
+  labs(x = "# of songs on the Billboard Top 100",
+       y = NULL)
+```
+
+`check_overlap` in text analysis is great.
+```{r}
+by_performer %>% 
+  arrange(desc(n_songs_on_top_100)) %>% 
+  head(50) %>% 
+  ggplot(aes(n_songs_on_top_100, n_songs_at_number_1)) + 
+  geom_point() + 
+  labs(x = "# of songs on the Billboard Top 100",
+       y = '# of songs on at #1') + 
+  geom_text(aes(label = performer), check_overlap = TRUE, hjust = 1, vjust = 1) + 
+  expand_limits(x = -10)
+```
+
+```{r}
+summarize_songs <- function(tbl) {
+  tbl %>% 
+    summarise(total_weeks_on_top_100 = n(),
+              total_weeks_at_number_1 = sum(week_position == 1),
+              n_songs_on_top_100 = n_distinct(song),
+              n_songs_at_number_1 = n_distinct(song[week_position == 1]),
+              .groups = "drop") %>% 
+    arrange(desc(n_songs_at_number_1))
+}
+```
+
+Great move for `decade` 
+```{r}
+by_performer_decade <- billboard %>% 
+  group_by(performer,
+           decade = 10 * year(week) %/% 10) %>%
+  summarize_songs()
+
+by_performer_decade %>% 
+  group_by(decade) %>% 
+  slice_max(total_weeks_on_top_100, n = 1)
+  
+
+by_performer_decade %>% 
+  group_by(decade) %>% 
+  slice_max(total_weeks_at_number_1, n = 1)
+
+
+by_song <- billboard %>% 
+  group_by(song_id) %>% 
+  summarize(peak = max(peak_position),
+            week_started_chart = min(week),
+            n_weeks = n(),
+            log_n_weeks = log2(n_weeks))
+
+songs_joined <- by_song %>% 
+  inner_join(audio_features, by = "song_id") %>% 
+  filter(!is.na(spotify_track_id))
+```
+
+# Modeling
+```{r}
+set.seed(2021)
+spl <- initial_split(songs_joined)
+train <- training(spl)
+test <- testing(spl)
+folds <- vfold_cv(train, 3)
+```
+
+
+# Xgboost
+```{r}
+recipe(log_n_weeks ~ danceability + energy + key + loudness + mode + speechiness +
+         acousticness + instrumentalness + liveness + valence + tempo + 
+         time_signature +
+         spotify_genre + week_started_chart, 
+       data = train) %>% 
+  step_mutate(month = month(week_started_chart),
+              spotify_genre = str_remove_all(spotify_genre, "\\['|'\\]")) %>% 
+  step_rm(week_started_chart) %>% 
+  prep() %>% 
+  bake(new_data = NULL)
+```
+
+
