@@ -52,14 +52,15 @@ bio: My research interests include data science, artificial intelligence, machin
 user_groups: Principal Investigators
 ---
 
-Hi there, I'm <em>Navid</em>.  
-<br> I know biographies are boring, shameless exercises in self-adoration, so I don't dive deep. Just a few things about me:
+<br>
+Hi there, I'm <em><strong>Navid</strong></em>.  
+I know biographies are boring, shameless exercises in self-adoration, so I don't dive deep. Just a few things about me:
 <br> I'm enthusiastic about <em>science</em>, and I find meaning in my work when I know that I am helping people. 
-<br> Nothing lights me up like creating a solution that makes real change and enhances people's lives, and I find out that science is a great tool for that purpose. I have a passion for science as it demands out-of-box solutions, creativity, creates bridges between seemingly disparate professional fields, and learning is an integral part of it. 
+Nothing lights me up like creating a solution that makes real change and enhances people's lives, and I find out that science is a great tool for that purpose. I have a passion for works which demands out-of-box solutions, creativity, creates bridges between seemingly disparate professional fields, and learning is an integral part of it. 
 <br> I've got my master's degree in Biostatistics at <a href="https://en.sbmu.ac.ir/index.jsp?fkeyid=&siteid=256&pageid=2046">Shahid Beheshti University of Medical Sciences and Health Services</a>. I also earned my bachelor's degree in Statistics from <a href="http://en.sbu.ac.ir/SitePages/Home.aspx">Shahid Beheshti University</a> in 2016. 
-<br> Alongside my friends, we've founded our business intelligence group, <a href="https://mayastat.ir/">Maya-Stat</a>, to help organizations to have data-driven decisions. Prior to that, I was working as an independent data analyst in statistical projects alongside doing research and teaching R by conducting workshops (e.g., my website is built with R and deployed with Netlify). Also, I was a data analyst at <a href="https://www.tezolmarket.com/">TezolMarket</a>, online supermarket, where we attempted to solve challenging data problems each day.
+<br> Alongside my friends, we've founded our business intelligence group, <a href="https://mayastat.ir/">MayaStat</a>, to help organizations to have data-driven decisions. Prior to that, I was working as an independent data analyst in statistical projects alongside doing research and teaching R by conducting workshops (e.g., my website is built with R and deployed with Netlify). Also, I was a data analyst at <a href="https://www.tezolmarket.com/">TezolMarket</a>, online supermarket, where we attempted to solve challenging data problems each day.
 <br> I am also interested in <a href="https://500px.com/p/Navidmohseni?view=photos">photography</a>, <a href="https://www.goodreads.com/user/show/54321599-navid-mohseni">books</a>, football, running, squash, and art.  
-<br> If you have any questions or comments, please feel free to contact me.
+If you have any questions or comments, please feel free to contact me.
 <br> Thanks for visiting!
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "media/Navid Mohseni- Resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
