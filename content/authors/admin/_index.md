@@ -11,12 +11,12 @@ education:
 email: Navvidmohseni
 highlight_name: no
 interests:
-- Data Science
-- Biostatistics/Statistics
+- Biostatistics
+- Epidemiology
 - Data Visualization
 - Machine Learning
 - Big Data
-- Artificial Intelligence
+- R
 organizations:
 - name: null
   url: null
@@ -51,9 +51,9 @@ Hi there, I'm <em><strong>Navid</strong></em>.<br>
 I know biographies are boring, shameless exercises in self-adoration, so I don't dive deep. Just a few things about me:
 <br> I'm enthusiastic about science, and I find meaning in my work when I know that I am helping people. 
 Nothing lights me up like creating a solution that makes real change and enhances people's lives, and I find out that science is a great tool for that purpose. I have a passion for works which demands out-of-box solutions, creativity, creates bridges between seemingly disparate professional fields, and learning is an indispensable part of it. 
-<br> I've got my master's degree in <strong>Biostatistics</strong> at <a href="https://en.sbmu.ac.ir/index.jsp?fkeyid=&siteid=256&pageid=2046">Shahid Beheshti University of Medical Sciences and Health Services</a>. I also earned my bachelor's degree in <strong>Statistics</strong> from <a href="http://en.sbu.ac.ir/SitePages/Home.aspx">Shahid Beheshti University</a> in 2016. 
-<br> Alongside my friends, we've founded our business intelligence group, <a href="https://mayastat.ir/">MayaStat</a>, to help organizations to have data-driven decisions, in Iran. Prior to that, I was working as an independent data analyst in statistical projects alongside doing research and teaching R by conducting workshops (e.g., my website is built with R and deployed with Netlify). Also, I was a data analyst at <a href="https://www.tezolmarket.com/">TezolMarket</a>, where we attempted to solve challenging data problems each day.
-<br> I am also interested in <a href="https://500px.com/p/Navidmohseni?view=photos">photography</a>, <a href="https://www.goodreads.com/user/show/54321599-navid-mohseni">books</a>, football, running, squash, and art. (Of course, a lot more) <br>
+<br> I've got my master's degree in <strong>Biostatistics</strong> at <a href="https://en.sbmu.ac.ir/index.jsp?fkeyid=&siteid=256&pageid=2046">Shahid Beheshti University of Medical Sciences and Health Services</a>. My thesis was about <em>cure rate models</em> for Hodgkin's Lymphoma patients by using frailty. I also earned my bachelor's degree in <strong>Statistics</strong> from <a href="http://en.sbu.ac.ir/SitePages/Home.aspx">Shahid Beheshti University</a> in 2016. 
+<br> Alongside my friends, we've founded our business intelligence group, <a href="https://mayastat.ir/">MayaStat</a>, to help organizations to have data-driven decisions. Prior to that, I was working as an independent data analyst in statistical projects alongside doing research and teaching R by conducting workshops (e.g., my website is built with R and deployed with Netlify). Also, I was a data analyst at <a href="https://www.tezolmarket.com/">TezolMarket</a>, where we attempted to solve challenging data problems each day.
+<br> I am also interested in <a href="https://500px.com/p/Navidmohseni?view=photos">photography</a>, <a href="https://www.goodreads.com/user/show/54321599-navid-mohseni">books</a>, football, running, squash, guitar, and art. (Of course, a lot more) <br>
 If you have any questions or comments, please feel free to contact me.
 <br> Thanks for visiting!
 
