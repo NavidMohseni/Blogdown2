@@ -25,7 +25,7 @@ experience:
   description: |-
     Responsibilities include:
     * Analyze data sets from clients to create clear and compelling reports and visualizations.
-    * Using descriptive and inferential statistical techniques
+    * Using descriptive and inferential statistical techniques.
     * Communicate and share the results of the analyses for better decision-making.
     * Explaining technical material to a non-technical audience.
     * Teaching R through conducting workshops.
@@ -51,8 +51,8 @@ experience:
   date_start: "2016-10-01"
   description: |-
     Responsibilities include:
-    * Analyzing and enhancing the performance and reliability of our web services through analyzing the data.
-    * Working in R&D, advertising strategies and analyzing the business development.
+    * Analyzed and enhanced the performance and reliability of our web services through analyzing the data.
+    * Worked in R&D, advertising strategies and analyzed the business development.
   location: Tehran
   title: Statistician, R&D
 - company: ShahabYab
