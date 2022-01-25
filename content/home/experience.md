@@ -10,23 +10,24 @@ experience:
 - company: "Maya-Stat"
   company_url: "https://www.mayastat.ir/"
   date_end: ""
-  date_start: "2021-04-01"
+  date_start: "2021-06-01"
   description: |-
     Responsibilities include:
-    * We are using advanced analytics and statistics to analyze and prioritize the activities that add value to businesses.
-    * Trying to overcome a range of challenges, such as optimizing marketing spend, forecasting demand, boosting customer retention, maximizing customer lifetime value, increasing operational efficiency, and saving costs.
-    * Data cleansing, manipulating data, converting analytic thinking into action, and communicating to data-driven change.
+    * We use advanced analytics and statistics to analyze and prioritize the activities that add value to businesses.
+    * Trying to overcome a range of challenges, such as optimizing marketing spend, forecasting demand, boosting customer retention, maximizing customer lifetime value, and saving costs.
+    * Data cleaning and manipulation, converting analytic thinking into action and communicating for data-driven change.
   location: Tehran
   title: Co-Founder
-- company: ""
+- company: "Freelance"
   company_url: ""
-  date_end: "2021-03-01"
+  date_end: "2021-05-30"
   date_start: "2019-04-01"
   description: |-
     Responsibilities include:
     * Analyze data sets from clients to create clear and compelling reports and visualizations.
-    * Communicate and share the results of the analyses for better decision making.
-    * Explaining technical material to non-technical audience.
+    * Using descriptive and inferential statistical techniques
+    * Communicate and share the results of the analyses for better decision-making.
+    * Explaining technical material to a non-technical audience.
     * Teaching R through conducting workshops.
   location: Tehran
   title: Data Analyst
@@ -39,11 +40,11 @@ experience:
     Responsibilities include:
     * Classification of stores to improve customer satisfaction based on machine learning algorithms. 
     * Implemented machine learning and statistical processes, including: anomaly detection, logistic regression, dimension reduction and variable selection, decision tree, and many other techniques.
-    * Generating statistical reports to support business strategy.
+    * Generated statistical reports to support business strategy.
     * Predictive analysis and associated processes, including pre-processing and cleaning data, exploratory data analysis, model training, testing, and evaluation.
     * Developed advanced analytics solutions for the business to improve decision making process.
   location: Tehran
-  title: Data Scientist
+  title: Data Analyst and Statistician
 - company: RahkarAndishan
   company_url: "http://www.rahkarandishan.com/"
   date_end: "2017-04-30"
@@ -56,9 +57,9 @@ experience:
   title: Statistician, R&D
 - company: ShahabYab
   company_url: ""
-  date_end: "2017-06-01"
-  date_start: "2016-09-01"
+  date_end: "2016-09-01"
+  date_start: "2016-06-01"
   description: Monthly statistical reports and analyzing business development.
   location: Tehran
-  title: Intern
+  title: Statistician Intern
 ---
