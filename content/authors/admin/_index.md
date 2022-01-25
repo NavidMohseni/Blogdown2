@@ -24,10 +24,10 @@ role: Statistician
 social:
 - icon: envelope
   icon_pack: fas
-  link: /#contact <br>
-- icon: goodreads
-  icon_pack: fab
-  link: https://www.goodreads.com/user/show/54321599-navid-mohseni
+  link: /#contact 
+- <br> icon: goodreads
+  <br> icon_pack: fab
+  <br> link: https://www.goodreads.com/user/show/54321599-navid-mohseni
 - icon: 500px
   icon_pack: fab
   link: https://500px.com/p/Navidmohseni
