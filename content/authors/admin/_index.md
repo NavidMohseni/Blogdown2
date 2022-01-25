@@ -25,9 +25,9 @@ social:
 - icon: envelope
   icon_pack: fas
   link: /#contact 
-- <br> icon: goodreads
-  <br> icon_pack: fab
-  <br> link: https://www.goodreads.com/user/show/54321599-navid-mohseni
+- icon: goodreads
+  icon_pack: fab
+  link: https://www.goodreads.com/user/show/54321599-navid-mohseni
 - icon: 500px
   icon_pack: fab
   link: https://500px.com/p/Navidmohseni
@@ -37,15 +37,9 @@ social:
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/navid-mohseni-24842690/
-- icon: instagram
-  icon_pack: fab
-  link: https://www.instagram.com/navidmohseni/
 - icon: medium
   icon_pack: fab
   link: https://medium.com/@navvidmohseni
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/NavvidMohseni
 superuser: yes
 bio: My research interests include data science, artificial intelligence, machine learning,
   and data visualization.
