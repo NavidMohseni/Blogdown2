@@ -11,8 +11,9 @@ education:
 email: Navvidmohseni
 highlight_name: no
 interests:
-- Epidemiology
 - Biostatistics
+- Epidemiology
+- Statistics
 - Data Visualization
 - R
 organizations:
@@ -38,12 +39,6 @@ social:
 - icon: medium
   icon_pack: fab
   link: https://medium.com/@navvidmohseni
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/NavvidMohseni
-- icon: instagram
-  icon_pack: fab
-  link: https://www.instagram.com/navidmohseni/  
 superuser: yes
 bio: My research interests include data science, artificial intelligence, machine learning,
   and data visualization.
