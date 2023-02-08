@@ -7,17 +7,6 @@ widget: experience
 subtitle: null
 date_format: Jan 2006
 experience:
-- company: "Maya-Stat"
-  company_url: "https://www.mayastat.ir/"
-  date_end: ""
-  date_start: "2021-06-01"
-  description: |-
-    Responsibilities include:
-    * We use advanced analytics and statistics to analyze and prioritize the activities that add value to businesses.
-    * Trying to overcome a range of challenges, such as optimizing marketing spend, forecasting demand, boosting customer retention, maximizing customer lifetime value, and saving costs.
-    * Data cleaning and manipulation, converting analytic thinking into action and communicating for data-driven change.
-  location: Tehran
-  title: Co-Founder
 - company: "Freelance"
   company_url: ""
   date_end: "2021-05-30"
