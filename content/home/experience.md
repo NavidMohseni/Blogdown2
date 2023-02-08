@@ -10,7 +10,7 @@ experience:
 - company: "Freelance"
   company_url: ""
   date_end: "2021-05-30"
-  date_start: "2019-04-01"
+  date_start: "2019-04-02"
   description: |-
     Responsibilities include:
     * Analyze data sets from clients to create clear and compelling reports and visualizations.
