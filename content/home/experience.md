@@ -7,6 +7,28 @@ widget: experience
 subtitle: null
 date_format: Jan 2006
 experience:
+- company: "Statistician"
+  company_url: ""
+  date_end: "2022-12-30"
+  date_start: "2021-04-01"
+  description: |-
+    Responsibilities include:
+    * I work with clients by taking data, cleaning data sets, interpreting it, creating dashboards        for critical KPIs, and turning data into content for reports or creative visualizations.
+    * Teaching and tutoring data science and statistics topics. Also, it covers mentoring and             supervising projects.
+  location: Tehran
+  title: Data Analyst
+- company: "Co-Founder of Maya-Stat"
+  company_url: ""
+  date_end: "2022-03-30"
+  date_start: "2021-06-01"
+  description: |-
+    Responsibilities include:
+    * Applied advanced analytics and statistics to analyze and prioritize the activities that add         value to businesses.
+    * Trying to overcome a range of challenges, such as optimizing marketing spend, forecasting           demand, boosting customer retention, maximizing customer lifetime value, increasing                 operational efficiency, and saving costs.
+    * Predictive analysis and associated processes, including pre-processing and cleaning data,           exploratory data analysis, model training, testing, and evaluation.
+  location: Tehran
+  title: Data Analyst
+
 - company: "Freelance"
   company_url: ""
   date_end: "2021-05-30"
