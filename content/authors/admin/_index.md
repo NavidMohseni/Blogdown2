@@ -2,6 +2,9 @@
 title: "Navid Mohseni"
 education:
   courses:
+  - course: Ph.D. in Computational Mathematics and Statistics
+    institution: Marquette University
+    year: 2023 
   - course: MSc in Biostatistics
     institution: Shahid Beheshti University of Medical Sciences and Health Services
     year: 2020
@@ -12,7 +15,7 @@ email: Navvidmohseni
 highlight_name: no
 interests:
 - Biostatistics
-- Statistics
+- Epidemiology
 - Data Visualization
 - R
 organizations:

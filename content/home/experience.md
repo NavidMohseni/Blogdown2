@@ -10,7 +10,7 @@ experience:
 - company: "Statistician"
   company_url: ""
   date_end: "2022-12-30"
-  date_start: "2021-04-01"
+  date_start: "2022-04-01"
   description: |-
     Responsibilities include:
     * I work with clients by taking data, cleaning data sets, interpreting it, creating dashboards        for critical KPIs, and turning data into content for reports or creative visualizations.
