@@ -47,7 +47,7 @@ user_groups: Principal Investigators
 <br>
 Hi there, I'm <em>Navid</em>.<br>
 I know biographies are boring, shameless exercises in self-adoration, so I don't dive deep. Just a few things about me:
-<br> I'm enthusiastic about science. </br>
+<br> I'm enthusiastic about scienceee. </br> 
 I find meaning in my work when I know I'm helping people. Nothing lights me up like creating a solution that makes real change and enhances people's lives. 
 <br> I've got my master's degree in <strong>Biostatistics</strong> at <a href="https://en.sbmu.ac.ir/index.jsp?fkeyid=&siteid=256&pageid=2046">Shahid Beheshti University of Medical Sciences and Health Services</a>, the first-ranked university in my country in biostatistics. My thesis was about <a href="https://mejc.sums.ac.ir/article_47474.html#:~:text=Results%3A%20In%20noncured%20cases%2C%20the,%2C%20and%2080.7%25%2C%20respectively."><em>A cure rate survival model by using discrete frailty</em></a>. I also earned my bachelor's degree in <strong>Statistics</strong> from <a href="http://en.sbu.ac.ir/SitePages/Home.aspx">Shahid Beheshti University</a> in 2016. 
 <br> I was working as an independent data analyst in statistical projects alongside doing research and teaching <em>R</em> by conducting workshops (e.g., my website is built with <em>R</em> and deployed with <em>Netlify</em>). Also, I was a data analyst at <a href="https://www.tezolmarket.com/">TezolMarket</a>, where we attempted to solve challenging data problems each day.
